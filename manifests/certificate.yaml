@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: dara-zip-d4c9f-certificate
+  namespace: dara-zip-d4c9f
+spec:
+  secretName: dara-zip-d4c9f-secret-tls
+  commonName: tan-dara9280-dara-zip.assessify.org
+  dnsNames:
+  - tan-dara9280-dara-zip.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
