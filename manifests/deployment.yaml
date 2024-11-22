@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dara-zip-d4c9f-deployment
+  labels:
+    app: dara-zip-d4c9f
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dara-zip-d4c9f
+  template:
+    metadata:
+      labels:
+        app: dara-zip-d4c9f
+    spec:
+      containers:
+        - name: dara-zip-d4c9f-container
+          image: pipejet/dara-zip-d4c9f:latest
+          ports:
+            - containerPort: 3000
